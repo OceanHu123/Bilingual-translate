@@ -1,18 +1,26 @@
 # Bilingual Translate
 
-Chrome 扩展：网页双语对照阅读，**自动跳过代码块**（包括 Ed 上带 copy 按钮的灰色 snippet）。开启后也会翻译视频字幕（YouTube、页面内视频）。
+Chrome 扩展：网页双语对照阅读，**自动跳过代码块**（包括 Ed 上的 snippet）。开启后也会翻译视频字幕（YouTube、页面内视频）。
 
-## 加载（不用自己跑 npm）
+## 安装
 
-## 加载（不用自己跑 npm）
+1. 克隆本仓库
+2. 安装依赖并构建：
 
-构建结果已经在 `dist/` 里。
+```bash
+npm install
+npm run build
+```
 
-1. Chrome 打开 `chrome://extensions`
-2. 打开右上角「开发者模式」
-3. 「加载已解压的扩展程序」→ 选择  
-   `/Users/oakley/Projects/bilingual-translate/dist`
-4. 点工具栏拼图，把 **Bilingual Translate** 钉出来
-5. 打开 Ed 课文，**直接点工具栏上的蓝色「译」图标**（不要找弹窗）
+3. Chrome 打开 `chrome://extensions`
+4. 打开右上角「开发者模式」
+5. 「加载已解压的扩展程序」→ 选择仓库里的 `dist` 目录
+6. 点工具栏拼图，把 **Bilingual Translate** 钉出来
 
-图标上出现 **ON**，页面右下角出现「已开启」，即表示成功。再点一次关闭。
+## 使用
+
+打开要翻译的网页（例如 Ed 课文），**直接点工具栏上的「译」图标**（没有弹窗）。
+
+图标上出现 **ON** 即已开启，页面右下角会闪一下「已开启」。再点一次关闭。
+
+正文会保留原文并在下方显示译文；代码块不翻译。视频若有字幕，会在画面上同时显示原文和译文。
